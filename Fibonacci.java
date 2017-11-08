@@ -12,6 +12,9 @@ public class Fibonacci {
 		int algo = fibo.fibonacci(0);
 		System.out.println("El fibonacci es :" + algo);	
 		fibo.numerosFibo(10);
+		System.out.println("La potencia es: "+ fibo.devolverPotenciaDeDos());
+		
+		
 //		System.out.println(fibo.dame());
 		ArrayList<Integer> num_fibonacci = fibo.darNumerosFibonacci(10);
 		System.out.println(num_fibonacci.get(1));
@@ -30,7 +33,9 @@ public class Fibonacci {
 		System.out.println(numeroCambio);
 	    System.out.println(fibo.esPrimo(38));	
 	    nombres();
-		
+		System.out.println(dame("mayor"));
+		ArrayList<Double> listaNombres = new ArrayList<Double>();
+		System.out.println(listaNombres.size());
 	}
 	public static ArrayList<String> nombres(){
 		ArrayList<String> listaNombres = new ArrayList<String>();
@@ -67,6 +72,30 @@ public class Fibonacci {
 		}
 		float promedio = (float)suma / lon;
 		return promedio;
+	}
+	public static int dame(String devolver){
+		ArrayList<Integer> numeros = new ArrayList<Integer>();
+		numeros.add(3); numeros.add(4); numeros.add(10); numeros.add(2);
+		int devolverNum;
+		if ( numeros.size() != 0){
+			devolverNum =numeros.get(0);
+		} else { 
+			devolverNum= 0;
+		}
+		if  (devolver == "menor"){
+			for (int i = 0; i < numeros.size() ; i++){
+				if ( devolverNum > numeros.get(i)){
+					devolverNum =  numeros.get(i);
+				}
+			}
+		} else {
+			for (int i = 0; i < numeros.size() ; i++){
+				if ( devolverNum < numeros.get(i)){
+					devolverNum =  numeros.get(i);
+				}
+			}
+		}
+		return devolverNum;
 	}
 	public static String cambio(int numero){
 		String vuelto="";

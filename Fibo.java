@@ -1,10 +1,22 @@
 package mate;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Fibo {
 	private String algo = "1";
 	private int num = 3;
+public int devolverPotenciaDeDos(){
+    @SuppressWarnings("resource")
+	Scanner sc = new Scanner(System.in);
+    System.out.println("Ingrese numero");
+//    String entrada = sc.nextLine();
+    
+//    int numero = Integer.parseInt(entrada);
+// o se puede hacer como 
+    int numero = sc.nextInt();
+	return (int) Math.pow(numero, 2);
+}
 
 public  int fibonacci(int n)
 {
