@@ -28,9 +28,23 @@ public class Fibonacci {
 		System.out.println("el promedio es " + promedioVector());
 		String numeroCambio = cambio(49);
 		System.out.println(numeroCambio);
-		
 	    System.out.println(fibo.esPrimo(38));	
+	    nombres();
 		
+	}
+	public static ArrayList<String> nombres(){
+		ArrayList<String> listaNombres = new ArrayList<String>();
+		listaNombres.add("lalal");
+		listaNombres.add("Jia");
+		System.out.println(listaNombres.size());		
+		for (String nombre:listaNombres){
+			System.out.println(nombre);
+		}
+		System.out.println("Otra forma");
+		for ( int i = 0; i < listaNombres.size(); i++){
+			System.out.println(listaNombres.get(i));
+		}
+		return listaNombres;
 	}
 	public static int capicua(int num){
 		String numString = Integer.toString(num);
