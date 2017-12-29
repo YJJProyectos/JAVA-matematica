@@ -172,7 +172,26 @@ public class Fibonacci {
 	}	
 		return "El vuelto de " + Integer.toString(numero) + " es:" + vuelto;
 	}
-	
-	
+    public static int[] ordenacionBurbuja(int vec[]){
+        final int N=vec.length;
+        for(int i=N-1;i>0;i--){
+                for(int j=0;j<i;j++){
+                        if(vec[j]>vec[j+1]){
+                                int temp=vec[j];
+                                vec[j]=vec[j+1];
+                                vec[j+1]=temp;
+                        }
+                }
+                System.out.print("iteracion: "+(N-i)+": ");imprimirVector(vec);System.out.println();
+        }
+        return vec;
+    }
+
+    public static void imprimirVector(int vec[]){
+        for(int i=0;i<vec.length;i++){
+                System.out.print(vec[i]+" ");
+        }
+    }
+
 }
 
